@@ -1,4 +1,4 @@
-package javafx.javafx;
+package com.gamedev.views;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

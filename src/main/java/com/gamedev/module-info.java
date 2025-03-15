@@ -1,4 +1,4 @@
-module javafx.javafx {
+module com.gamedev {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -11,6 +11,12 @@ module javafx.javafx {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens javafx.javafx to javafx.fxml;
-    exports javafx.javafx;
+    exports com.gamedev.views;
+    opens com.gamedev.views to javafx.fxml;
+    exports com.gamedev.controllers;
+    opens com.gamedev.controllers to javafx.fxml;
+    exports com.gamedev.models;
+    opens com.gamedev.models to javafx.fxml;
+    exports com.gamedev.styling;
+    opens com.gamedev.styling to javafx.fxml;
 }
