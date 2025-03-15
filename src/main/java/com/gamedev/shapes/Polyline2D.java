@@ -16,4 +16,18 @@ public class Polyline2D extends Shape2D {
         polyline.setStrokeWidth(strokeWidth);
         this.shape = polyline;
     }
+
+    /**
+     * Creates a default 2D Polyline.
+     * @return the default 2D Polyline.
+     */
+    public static Polyline2D createDefaultPolyline() {
+        double[] points = {
+                450.0, 200.0,  // First point
+                500.0, 250.0,  // Second point
+                425.0, 275.0,  // Third point
+                475.0, 300.0   // Fourth point
+        };
+        return new Polyline2D(points, Color.ORANGE, 3.0);
+    }
 }

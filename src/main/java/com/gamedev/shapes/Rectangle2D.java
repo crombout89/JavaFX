@@ -27,4 +27,20 @@ public class Rectangle2D extends Shape2D {
         rectangle.setArcHeight(arcHeight);
         this.shape = rectangle;
     }
+
+    /**
+     * Creates a default 2D Rectangle
+     * @return the default 2D Rectangle
+     */
+    public static Rectangle2D createDefaultRectangle() {
+        return new Rectangle2D(
+                200,
+                50,
+                100,
+                75,
+                Color.GREEN,
+                20,
+                20
+        );
+    }
 }

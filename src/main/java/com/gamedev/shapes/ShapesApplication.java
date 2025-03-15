@@ -24,7 +24,7 @@ public class ShapesApplication extends Application {
      */
     public void start(final Stage stage) {
         initializeScene();
-        createShapes();
+        createAndPositionShapes();
         configureStage(stage);
     }
 
@@ -34,5 +34,48 @@ public class ShapesApplication extends Application {
     private void initializeScene() {
         root = new Group();
         scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT, BG_COLOR);
+    }
+
+    /*
+     *
+     */
+    private void createAndPositionShapes() {
+        Shape2D[] shapes = {
+                Circle2D.createDefaultCircle(),
+                Rectangle2D.createDefaultRectangle(),
+                Ellipse2D.createDefaultEllipse(),
+                Polygon2D.createDefaultPolygon(),
+                Polyline2D.createDefaultPolyline()
+        };
+
+        addShapesToScene(shapes);
+    }
+
+    /*
+     *
+     * @param shapes
+     */
+    private void addShapesToScene(final Shape2D[] shapes) {
+        for (Shape2D shape : shapes) {
+            root.getChildren().add(shape.getShape());
+        }
+    }
+
+    /*
+     *
+     * @param stage
+     */
+    private void configureStage(final Stage stage) {
+        stage.setTitle("JavaFX 2D Shapes Demo");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(final String[] args) {
+        launch(args);
     }
 }

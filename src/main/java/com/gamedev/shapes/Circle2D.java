@@ -23,4 +23,18 @@ public class Circle2D extends Shape2D {
         circle.setStroke(strokeColor);
         this.shape = circle;
     }
+
+    /**
+     * Creates a default 2D Circle.
+     * @return the default 2D Circle.
+     */
+    public static Circle2D createDefaultCircle() {
+        return new Circle2D(
+                100,
+                100,
+                50,
+                Color.BLUE,
+                Color.DARKBLUE
+        );
+    }
 }

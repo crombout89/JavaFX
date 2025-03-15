@@ -1,6 +1,7 @@
 package com.gamedev.shapes;
 
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Ellipse;
 
 /**
  *
@@ -22,5 +23,18 @@ public class Ellipse2D extends Shape2D {
                 centerY, radiusX, radiusY);
         ellipse.setFill(fillColor);
         this.shape = ellipse;
+    }
+
+    /**
+     * Creates a default 2D Ellipse.
+     * @return the default 2D Ellipse
+     */
+    public static Ellipse2D createDefaultEllipse() {
+        return new Ellipse2D(
+          50,
+          50,
+          200,
+          100,
+          Color.DEEPPINK);
     }
 }

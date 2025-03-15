@@ -19,4 +19,8 @@ module com.gamedev {
     opens com.gamedev.models to javafx.fxml;
     exports com.gamedev.styling;
     opens com.gamedev.styling to javafx.fxml;
+
+    // Add these lines
+    exports com.gamedev.shapes;
+    opens com.gamedev.shapes to javafx.fxml;
 }
